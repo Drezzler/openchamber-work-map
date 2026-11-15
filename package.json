@@ -1,0 +1,37 @@
+{
+  "name": "lot-map",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "openchamber": {
+    "apiVersion": 1,
+    "engines": {
+      "openchamber": ">=2.7.0"
+    },
+    "id": "lot-map",
+    "name": "Work map",
+    "icon": "icon.svg",
+    "contributes": {
+      "panel": {
+        "entry": "panel/index.html"
+      },
+      "service": {
+        "entry": "service/main.js",
+        "runtime": "host",
+        "provides": ["opencode"],
+        "keepRunning": true
+      },
+      "statusSection": {
+        "source": {
+          "path": "/status",
+          "interval": 3000
+        },
+        "title": "Work map"
+      }
+    }
+  },
+  "dependencies": {
+    "@openchamber/sdk": "2.7.0",
+    "@opencode/client": "^2.3.0"
+  }
+}

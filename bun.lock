@@ -1,0 +1,28 @@
+{
+  "lockfileVersion": 2,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "lot-map",
+      "dependencies": {
+        "@openchamber/sdk": "2.7.0",
+        "@opencode/client": "^2.3.0",
+      },
+    },
+  },
+  "packages": {
+    "@openchamber/sdk": ["@openchamber/sdk@2.7.0", "", { "dependencies": { "zod": "^4.3.6" }, "bin": { "openchamber-guest-check": "scripts/check-guest.ts", "openchamber-guest-bundle": "scripts/bundle-guest.ts" } }, "sha512-dYrQad76cm1YMOs9GEgX7f9pxzqozPQUmtsmqGUNdKADqhaWRg9vIHJiM5JptZgpmim0uwD8C/+Sz+5tRpZv/g=="],
+
+    "@opencode/client": ["@opencode/client@2.3.0", "", { "dependencies": { "@opencode/protocol": "2.3.0", "@opencode/schema": "2.3.0" }, "peerDependencies": { "effect": "4.1.0", "solid-js": ">=1.9.0" }, "optionalPeers": ["effect", "solid-js"] }, "sha512-xu74XGiYIqLZ2FzIrtjaR5UNWWXY3fRln0WLgZoQTR/wWMgG+T9XGQQGCl8ry8jnCFsJVokiHemBqft9oMzC1A=="],
+
+    "@opencode/protocol": ["@opencode/protocol@2.3.0", "", { "dependencies": { "@opencode/schema": "2.3.0", "effect": "4.1.0" } }, "sha512-V37zTGXVa1j9aXUvUY01YN1EtfMMSWoT5pSCc6M0UsGdTUZX6QL/vMgGVGzPvbt7+Z8Vo40/0DFRPyqT4sdvnw=="],
+
+    "@opencode/schema": ["@opencode/schema@2.3.0", "", { "dependencies": { "@standard-schema/spec": "1.1.0", "effect": "4.1.0" } }, "sha512-9CPS4+BXWUs3ELIWo68AA2q4XEPMkRYwpGYdqd/wNz3jRTOB8swef+2/z+igkCel+UtlX+dAlGTmSnid/JcoKw=="],
+
+    "@standard-schema/spec": ["@standard-schema/spec@1.1.0", "", {}, "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w=="],
+
+    "effect": ["effect@4.1.0", "", {}, "sha512-lGx2MJJyrXA8RZb2UpQ/0Nkb5Utaimby7oD92+18noBxLPE85IFOvptdzau8dvcxAOwfwHo9iqapbKeFzqQM/Q=="],
+
+    "zod": ["zod@4.6.7", "", {}, "sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg=="],
+  }
+}
