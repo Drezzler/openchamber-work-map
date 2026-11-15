@@ -1,0 +1,18 @@
+name: check
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - run: bunx openchamber-guest-check
+      - run: bunx openchamber-guest-bundle panel/main.ts panel/main.js
+      - run: bunx openchamber-guest-bundle --node service/main.ts service/main.js
+      - run: node scripts/smoke.mjs
